@@ -3,4 +3,27 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: contralto-big, sans-serif;
+}
+
+a {
+	font-family: contralto-big, sans-serif;
+	text-decoration: none;
+	color: #121212;
+}
+
+header {
+	width: 50%;
+	display: flex;
+}
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+}
+nav a:visited {
+	color: #121212;
+}
+#logo {
+	width: 25%;
 }
