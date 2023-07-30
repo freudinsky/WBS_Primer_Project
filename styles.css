@@ -231,6 +231,11 @@ iframe {
 	margin: 0;
 	padding-left: 40px;
 }
+footer {
+	border-top: rgba(249, 249, 249, 0.2) solid;
+	margin-top: 2em;
+	padding-top: 2em;
+}
 footer ul {
 	display: flex;
 	justify-content: space-around;
