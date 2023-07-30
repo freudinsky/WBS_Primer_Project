@@ -1,12 +1,12 @@
 html,
 body {
 	margin: 0;
-	padding: 0;
+	padding: 0 0 10px 0;
 	box-sizing: border-box;
 	font-family: contralto-big, sans-serif;
-	background-color: #121212;
+	background-color: #000000;
 	color: #f9f9f9;
-	min-height: 200vh;
+	scroll-behavior: smooth;
 }
 a {
 	font-family: contralto-big, sans-serif;
@@ -15,14 +15,21 @@ a {
 }
 h1 {
 	font-variant: small-caps;
-	font-size: 5rem;
+	font-size: 7rem;
+	font-family: fino-sans;
+	letter-spacing: 5px;
 }
-
+hr {
+	width: 70%;
+	margin: 2rem auto;
+}
 header {
+	display: flex;
+	align-items: center;
 	position: fixed;
 	z-index: 1000;
 	width: 100vw;
-	height: 80px;
+	height: 10vh;
 	background-color: rgba(32, 32, 32, 0.97);
 	margin: 0;
 	padding-top: 0.5rem;
@@ -36,8 +43,10 @@ nav ul {
 	margin: 0;
 	width: 40vw;
 }
+
 nav img {
 	width: 10vw;
+	min-width: 150px;
 }
 nav a {
 	font-variant: small-caps;
@@ -64,7 +73,7 @@ video {
 	position: absolute;
 	top: 0;
 	left: 0;
-	filter: blur(10px);
+	filter: blur(5px);
 }
 #video-wrapper {
 	position: relative;
@@ -75,43 +84,51 @@ video {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-bottom: rgba(249, 249, 249, 0.2) solid;
 }
 #hometext {
 	position: relative;
 }
 #h-latest {
+	width: 100%;
+	margin: 100px 0 20px 0;
 	font-variant: small-caps;
-	font-size: 3rem;
-	margin: 50px 0 0 0vw;
 	text-align: center;
-	letter-spacing: 2px;
-	font-size: 3.5em;
+	font-family: fino-sans;
+	letter-spacing: 5px;
+	font-size: 4em;
 }
 .blog {
 	background-color: rgba(32, 32, 32, 0.6);
-	margin-left: 5vw;
+	/* margin-left: 5vw; */
 	margin-top: 50px;
-	width: 65vw;
+	width: 60vw;
 }
 article {
 	width: 90%;
 	margin: auto;
-	padding-top: 1rem;
+	padding-top: 3rem;
 	padding-bottom: 1.5rem;
 	flex-wrap: wrap;
 	font-size: 18px;
 	letter-spacing: 1px;
-	font-weight: 200;
+	font-weight: 100;
 }
 article h2 {
 	font-variant: small-caps;
 	font-size: 3rem;
 	margin: 0;
 	text-shadow: 0px 0px 5px #f7e41a, 0px 0px 10px #a625c7;
+	font-family: fino-sans;
+	letter-spacing: 5px;
+}
+article h3 {
+	margin: 0 20px;
 }
 article ol,
 article p,
-article ul {
+article ul,
+#main-aside p {
 	line-height: 1.6em;
 }
 article p {
@@ -119,11 +136,15 @@ article p {
 	margin-left: auto;
 	margin-right: auto;
 }
-article ol>li {
+article ol > li {
 	margin-top: 1em;
+}
+article ol > li:first-child {
+	margin-top: 0;
 }
 article ol {
 	width: 60%;
+	margin-top: 0;
 }
 article span {
 	color: #f7e41a;
@@ -135,10 +156,119 @@ article span {
 .olist {
 	display: flex;
 	justify-content: space-around;
+	margin-top: 2em;
 }
-aside {
-	margin-top: 1rem;
+article aside {
+	padding-left: 30px;
+}
+article aside div {
+	border-left: rgba(249, 249, 249, 0.5) solid;
+	padding: 10px 10px 5px 5px;
 }
 aside a:hover {
 	color: #f7e41a;
+}
+#main-content {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+#main-aside {
+	background-color: rgba(32, 32, 32, 0.6);
+	margin-top: 50px;
+	padding-top: 1rem;
+	width: 30vw;
+	height: fit-content;
+	font-size: 18px;
+}
+#main-aside h2 {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	font-size: 2rem;
+	font-family: fino-sans;
+	letter-spacing: 3px;
+	font-variant: small-caps;
+}
+#main-aside p {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 100;
+	letter-spacing: 1px;
+}
+#yt {
+	position: relative;
+	width: 90%;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	overflow: hidden;
+	padding-top: 56.25%;
+}
+iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.footer {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	flex-wrap: wrap;
+}
+#copy {
+	width: 100%;
+	margin: 0;
+	padding-left: 40px;
+}
+footer ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+}
+footer ul > li::after {
+	content: "|";
+	margin: 1.5em;
+}
+footer ul > li:last-child::after {
+	content: none;
+}
+footer a,
+footer p {
+	font-variant: small-caps;
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+	font-weight: 100;
+}
+footer a:visited {
+	color: #f9f9f9;
+}
+footer a:hover {
+	color: #f7e41a;
+}
+
+@media screen and (max-width: 1024px) {
+	nav ul {
+		width: 80vw;
+	}
+	h1 {
+		font-size: 4rem;
+	}
+	#h-latest {
+		font-size: 3.5rem;
+	}
+	article h2 {
+		font-size: 2.5rem;
+	}
+	.blog {
+		width: 90vw;
+	}
+	#main-aside {
+		width: 90%;
+	}
 }
