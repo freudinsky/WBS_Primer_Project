@@ -144,7 +144,7 @@ article ol > li:first-child {
 	margin-top: 0;
 }
 article ol {
-	width: 60%;
+	width: 90%;
 	margin-top: 0;
 }
 article span {
@@ -154,17 +154,21 @@ article span {
 	width: 100%;
 	margin-top: 1.5rem;
 }
-.olist {
+/* .olist {
 	display: flex;
 	justify-content: space-around;
 	margin-top: 2em;
-}
+} */
 article aside {
+	float: right;
+	height: fit-content;
 	padding-left: 30px;
 }
 article aside div {
 	border-left: rgba(249, 249, 249, 0.5) solid;
-	padding: 10px 10px 5px 5px;
+	background-color: #000000;
+	padding: 10px 15px 15px 5px;
+	margin: 10px 0;
 }
 aside a:hover {
 	color: #f7e41a;
